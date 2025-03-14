@@ -13,7 +13,7 @@ class PostController extends Controller
 {
     public function index(): Response {
         return Inertia::render('welcome', [
-            'posts' => Post::with('author')->get()
+            'posts' => Post::with('author')->latest()->get()
         ]);
     }
 
