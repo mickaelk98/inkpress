@@ -111,7 +111,7 @@ class PostController extends Controller
             $message = "poste like";
         }
 
-        return redirect()->back();
+        return redirect()->back()->with('success', $message);
     }
 
 }
